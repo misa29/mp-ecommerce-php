@@ -1,7 +1,7 @@
 <?php       
        //echo "THis is a test file on a test repo for testing the deplo y functionality using github webhooks!!!!";
  //   echo exec('php composer.phar require "mercadopago/dx-php"');
- require 'vendor/autoload.php';
+// require 'vendor/autoload.php';
 
    MercadoPago\SDK::setAccessToken("APP_USR-5426390215857760-103016-e87a904b39efbd0938d63f71254577a7-665816235");
 
