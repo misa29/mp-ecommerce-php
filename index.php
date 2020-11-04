@@ -3,6 +3,8 @@
  //   echo exec('php composer.phar require "mercadopago/dx-php"');
 // require 'vendor/autoload.php';
 
+// SDK de Mercado Pago
+require __DIR__ .  '/vendor/autoload.php';
    MercadoPago\SDK::setAccessToken("APP_USR-5426390215857760-103016-e87a904b39efbd0938d63f71254577a7-665816235");
 
   
