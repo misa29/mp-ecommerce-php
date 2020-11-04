@@ -1,6 +1,23 @@
 <?php       
        //echo "THis is a test file on a test repo for testing the deplo y functionality using github webhooks!!!!";
  //   echo exec('php composer.phar require "mercadopago/dx-php"');
+ require 'vendor/autoload.php';
+
+   MercadoPago\SDK::setAccessToken("APP_USR-5426390215857760-103016-e87a904b39efbd0938d63f71254577a7-665816235");
+
+  
+
+// Crea un objeto de preferencia
+$preference = new MercadoPago\Preference();
+
+// Crea un ítem en la preferencia
+$item = new MercadoPago\Item();
+$item->id = 1;
+$item->title = 'Mi producto';
+$item->quantity = 1;
+$item->unit_price = 75.56;    
+$preference->items = array($item);
+$preference->save();
 ?>
 <!DOCTYPE html>
 <html class="supports-animation supports-columns svg no-touch no-ie no-oldie no-ios supports-backdrop-filter as-mouseuser" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -46,6 +63,10 @@
 
 
 <body class="as-theme-light-heroimage">
+       <script
+  src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
+  data-preference-id="<?php echo $preference->id; ?>">
+</script>
 
     <div class="stack">
         
