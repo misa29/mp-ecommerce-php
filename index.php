@@ -1,4 +1,7 @@
-<?php       
+<?php     
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
        //echo "THis is a test file on a test repo for testing the deplo y functionality using github webhooks!!!!";
  //   echo exec('php composer.phar require "mercadopago/dx-php"');
 // require 'vendor/autoload.php';
