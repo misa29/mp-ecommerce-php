@@ -7,6 +7,7 @@ error_reporting(E_ALL);
 // require 'vendor/autoload.php';
 
 // SDK de Mercado Pago
+echo __DIR__ ;
 require 'vendor/autoload.php';
    MercadoPago\SDK::setAccessToken("APP_USR-5426390215857760-103016-e87a904b39efbd0938d63f71254577a7-665816235");
 
