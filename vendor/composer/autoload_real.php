@@ -9,7 +9,7 @@ class ComposerAutoloaderInit2e21f6004457f80cfc55d2469a2a28e9
     public static function loadClassLoader($class)
     {
         if ('Composer\Autoload\ClassLoader' === $class) {
-            require __DIR__ . '/ClassLoader.php';
+            require  'ClassLoader.php';
         }
     }
 
@@ -34,17 +34,17 @@ class ComposerAutoloaderInit2e21f6004457f80cfc55d2469a2a28e9
 
             call_user_func(\Composer\Autoload\ComposerStaticInit2e21f6004457f80cfc55d2469a2a28e9::getInitializer($loader));
         } else {
-            $map = require __DIR__ . '/autoload_namespaces.php';
+            $map = require  'autoload_namespaces.php';
             foreach ($map as $namespace => $path) {
                 $loader->set($namespace, $path);
             }
 
-            $map = require __DIR__ . '/autoload_psr4.php';
+            $map = require  'autoload_psr4.php';
             foreach ($map as $namespace => $path) {
                 $loader->setPsr4($namespace, $path);
             }
 
-            $classMap = require __DIR__ . '/autoload_classmap.php';
+            $classMap = require .'autoload_classmap.php';
             if ($classMap) {
                 $loader->addClassMap($classMap);
             }
